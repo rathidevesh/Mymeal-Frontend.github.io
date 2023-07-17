@@ -1,0 +1,315 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  :root {
+    --navbar-height: 59px;
+  }
+  
+  #navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+  }
+  
+  #logo {
+    margin: 10px 34px;
+  }
+  
+  #logo img {
+    width: auto;
+    height: var(--navbar-height);
+  }
+  
+  #navbar ul {
+    display: flex;
+  }
+  
+  #navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+  }
+  
+  #navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+  }
+  
+  #navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    transition: 0.3s ease all;
+    text-decoration: none;
+  }
+  
+  #navbar ul li a:hover {
+    color: black;
+    transform: scale(1.15) translateY(-6px);
+    background-color: white;
+  }
+  
+  #home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    height: 50vh;
+  }
+  
+  #home::before {
+    content: "";
+    background: url("https://www.eatingwell.com/thmb/m5xUzIOmhWSoXZnY-oZcO9SdArQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/article_291139_the-top-10-healthiest-foods-for-kids_-02-4b745e57928c4786a61b47d8ba920058.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+  }
+
+  #home h1{
+    color: white;
+    text-align: center;
+  }
+
+  #home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  #services{
+    margin: 34px;
+    display: flex;
+    transition: 0.3s ease all;
+  }
+
+  #services :hover{
+    transform: scale(1.07) translateY(-5%);
+  }
+
+  #services .box{
+    box-shadow: rgba(0, 0, 0, 0.2);
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background-color: rgb(229, 218, 243);
+    margin-bottom: 20px;
+    
+  }
+
+ 
+
+  #services .box img{
+    height: 160px;
+    display: block;
+    margin: auto;
+  }
+
+  #client-section {
+    
+    position: relative;
+  }
+  
+  #client-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("https://www.heart.org/-/media/AHA/H4GM/Article-Images/fruit-and-vegetables.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+  }
+  
+  #clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  #clients img {
+    height: 124px;
+    padding: 10px; 
+  }
+  
+  .clientitem {
+    padding: 10px; 
+  }
+
+  #contact{
+    position: relative;
+  }
+
+  #contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+  }
+
+  #contact ::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url("https://media.istockphoto.com/id/1311934969/photo/contact-us.webp?b=1&s=170667a&w=0&k=20&c=2sJEN1Hhg6heUi1ZxKs6pJDwcyLYXPc4pUGd3hEjOjE=") no-repeat center center/cover;
+  }
+
+  #contact-box form{
+    width: 40%;
+    
+  }
+
+  #contact-box label{
+    font-size: 1.3rem;
+  }
+
+  #contact-box input,
+  #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+  }
+
+  footer{
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+  }
+  
+  .h-primary {
+    font-size: 2.8rem;
+    padding: 12px;
+    text-align: center; 
+  }
+  
+  .h-secondary {
+    font-size: 3.8rem;
+    padding: 12px;
+    text-align: center; 
+  }
+  
+  .btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+
+@media screen and (max-width: 1330px) {
+
+
+#navbar {
+  flex-direction: column;
+}
+
+#navbar ul li a{
+  font-size: 1rem;
+  padding: 0px 7px;
+  padding-bottom: 8px;
+}
+
+#home{
+  height: 370px; 
+  padding: 3px 28px;
+}
+
+#home::before{
+  height: 480px; 
+}
+
+#home p{
+  font-size: 13px;
+}
+
+
+#services{
+  flex-direction: column;
+}
+
+#services .box { 
+  padding: 14px;
+  margin: 2px 0px; 
+  margin-bottom: 20px;
+}
+
+.services-container{
+  margin-top: 104px;
+}
+
+#clients{
+  flex-wrap: wrap;
+}
+
+#clients img{
+  width: 66px;
+  padding: 6px;
+  height: auto;
+}
+
+
+#contact-box form{
+  width:80%;
+}
+
+.h-primary{
+  font-size:26px;
+}
+.btn{
+  font-size: 13px;
+  padding: 4px 8px;
+}
+
+}
+
+@media screen and (max-width: 281px) {
+
+  #navbar ul li a {
+    font-size: 1rem;
+    padding: 0px 4px;
+    padding-bottom: 8px;
+  }
+
+  #services .box img{
+    height: 118px;
+
+  }
+    .h-secondary{
+      font-size: 1.8rem;
+      padding: 12px;
+    }
+}
